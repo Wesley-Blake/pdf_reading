@@ -18,9 +18,7 @@ def main():
     path = input("Path of interest: ")
     if not os.path.isfile(path): SystemExit(1)
     for dirpath, dirnames, filenames in os.walk(path):
-        for file in filenames:
-            if file.endswith(".pdf"):
-                pdf_search(dirpath, file, "P0520504")
+        pass
 
 
 if __name__ == '__main__':
