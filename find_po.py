@@ -3,6 +3,7 @@ from pathlib import Path
 import pdfplumber
 import pandas as pd
 
+
 def get_path():
     directory = Path().cwd() / "pdf_reading"
     path = Path()
@@ -11,6 +12,7 @@ def get_path():
             path = i
     with open(path) as f:
         return f.readline()
+
 
 def pdf_search(dirpath, file, find_me):
     all_text = ""
