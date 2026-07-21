@@ -22,7 +22,7 @@ def pdf_search(dirpath, file, find_me):
         SystemExit(1)
     with pdfplumber.open(path) as pdf:
         for page in pdf.pages:
-            all_text += page.extract_text() + '\n'
+            all_text += page.extract_text() + "\n"
     if find_me in all_text:
         print(path)
 
@@ -32,11 +32,11 @@ def main():
     path = get_path()
     pd.read_excel(path)
     print(pd)
-    #dataframe = pd.read_excel(path)
-    #if not os.path.isfile(path): SystemExit(1)
-    #for dirpath, dirnames, filenames in os.walk(path):
+    # dataframe = pd.read_excel(path)
+    # if not os.path.isfile(path): SystemExit(1)
+    # for dirpath, dirnames, filenames in os.walk(path):
     #    pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
